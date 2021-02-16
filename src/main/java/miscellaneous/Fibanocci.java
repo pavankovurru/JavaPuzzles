@@ -15,9 +15,6 @@ public class Fibanocci {
           a=b;
           b=sum;
           sum=a+b;
-
-
-
       }
   }
 }

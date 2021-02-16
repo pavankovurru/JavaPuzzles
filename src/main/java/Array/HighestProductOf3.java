@@ -28,6 +28,7 @@ public class HighestProductOf3 {
                 maximumThree = maximumTwo;
                 maximumTwo = maximumOne;
                 maximumOne = arr[i];
+
             } else if (arr[i] > maximumTwo) {
                 maximumThree = maximumTwo;
                 maximumTwo = arr[i];

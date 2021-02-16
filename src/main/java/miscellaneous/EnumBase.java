@@ -6,9 +6,9 @@ public class EnumBase {
 
     public enum Level {
 
-        HIGH  (1,"ONE"),  //calls constructor with value 3
+        HIGH  (1,"ONE"),  //calls constructor with value 1
         MEDIUM(2,"TWO"),  //calls constructor with value 2
-        LOW   (3,"THREE")   //calls constructor with value 1
+        LOW   (3,"THREE")   //calls constructor with value 3
         ; // semicolon needed when fields / methods follow
 
 
