@@ -2,6 +2,21 @@ package Array;
 
 import java.util.stream.IntStream;
 
+
+//       Equilibrium index of an array is an index such that the sum of elements at lower
+//       indexes is equal to the sum of elements at higher indexes.
+//
+//        Example :
+//
+//        Input: A[] = {-7, 1, 5, 2, -4, 3, 0}
+//        Output: 3
+//        3 is an equilibrium index, because:
+//        A[0] + A[1] + A[2] = A[4] + A[5] + A[6]
+//
+//        Input: A[] = {1, 2, 3}
+//        Output: -1
+
+
 class EquilibriumIndex
 {
     // Optimized method to find equilibrium index of an array
@@ -18,7 +33,7 @@ class EquilibriumIndex
         {
 
             // sum of elements of left sub-array A[0..i-1] is "(total - (A[i] + right))"
-            if (rightSum == total - (A[i] + rightSum)) {
+            if (rightSum == total - (A[i] + rightSum)) {  //checking left sum = right sum
                 System.out.println("Equilibrium Index found at " + i);
             }
 

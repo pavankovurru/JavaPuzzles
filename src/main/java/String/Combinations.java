@@ -21,12 +21,13 @@ public class Combinations
             combination(prefix + s.charAt(i), s.substring(0, i) + s.substring(i+1,N)); // will get all permutations and combinations
     }
 
+    //n!
     static void permutation(String prefix, String s)
     {
         int N = s.length();
 
         if (N == 0)
-            System.out.println("" + prefix);
+            System.out.println(prefix);
 
         for (int i = 0 ; i < N ; i++)
             permutation(prefix + s.charAt(i), s.substring(0, i) + s.substring(i+1, N));

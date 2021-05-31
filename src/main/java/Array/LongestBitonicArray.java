@@ -9,14 +9,16 @@ public class LongestBitonicArray {
     public static void findBitonicSubarray(int[] A)
     {
         int n = A.length;
+        //place holders to update at the end of processing
         int end_index = 0, max_len = 0;
+
 
         int i = 0;
         while (i + 1 < n)
         {
             // check for Longest Bitonic Subarray starting at A[i]
 
-            // reset length to 1
+            // start with length to 1
             int len = 1;
 
             // run till sequence is increasing

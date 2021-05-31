@@ -11,6 +11,7 @@ public class DuplicateInArray {
 
     Set<Integer> set = new HashSet<>();
 
+
     for (int i = 0; i < array.length; i++) {
       // If same integer is already present then add method will return FALSE
       if (set.add(array[i]) == false) {

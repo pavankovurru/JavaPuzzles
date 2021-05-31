@@ -20,6 +20,11 @@ public class RotatedPalindrome {
 //    }
 
 
+    // 2 nd approach concatenate string with itself and see if there is a palindrome of length of original string.
+
+    //both solutions re o(n square)
+
+
     // expand in both directions of low and high to find palindrome of length k
     private static boolean expand(String str, int low, int high, int k)
     {
