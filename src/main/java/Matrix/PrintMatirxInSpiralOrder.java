@@ -47,11 +47,11 @@ public class PrintMatirxInSpiralOrder {  // TIME COMPLEXITY - O(M*N)
             }
             bottom--;
 
+            //HANDLE LEFT COLUMN
             if (top > bottom) {
                 break;
             }
 
-            //HANDLE LEFT COLUMN
             // print left column
             for (int i = bottom; i >= top; i--) {
                 System.out.print(mat[i][left] + " ");

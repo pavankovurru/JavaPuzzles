@@ -6,6 +6,7 @@ import java.util.Map;
 
 public class Anagram {
 
+    // I am Lord Voldemort
 
     //    SIMPLE SOLUTION - convert stings to char array , sort them and compare two arrays
 

@@ -4,7 +4,6 @@ public class HighestProductOf3 {
 
     public static void main(String[] args) {
         System.out.println(getHighestProductOfThree(new int[]{1,2,3,4,5}));
-
         getHighestProductOfThree(new int[]{1,2,3,4,5,6});
     }
 

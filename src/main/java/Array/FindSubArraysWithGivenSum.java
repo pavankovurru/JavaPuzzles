@@ -11,7 +11,6 @@ public class FindSubArraysWithGivenSum {
   }
 
 
-
     public static void subArraySum(int[] arr, int n, int sum) {
         //cur_sum to keep track of cumulative sum till that point
         int cur_sum = 0;

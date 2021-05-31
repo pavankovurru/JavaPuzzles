@@ -12,11 +12,11 @@ public class ThreeSumClosest {
     public static int threeSumClosest(int[] nums, int target) {
 
         int minDiff = Integer.MAX_VALUE;
-        int finalResult = 0;
+        int finalResult = 0;   //contains closest value to target
 
         Arrays.sort(nums);
 
-        for (int i = 0; i < nums.length-2; i++) {
+        for (int i = 0; i < nums.length; i++) {
 
             int start = i + 1;
             int end = nums.length - 1;

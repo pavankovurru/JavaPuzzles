@@ -40,3 +40,10 @@ public class BinaryStringFromWildCard {
         printAllCombinations(pattern, 0);
     }
 }
+
+//
+//1011000010
+//        1011000011
+//        1011000111
+//        1011100111
+//        1111100111
