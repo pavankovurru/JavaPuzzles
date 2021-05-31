@@ -21,7 +21,7 @@ public class ClockAngleProblem {
         // calculate the angle difference
         int angle = Math.abs(h - m);
 
-        // consider shorter angle and return it
+        // consider shorter angle and return it (reverse angle for angles more than 360)
         if (angle > 180) {
             angle = 360 - angle;
         }

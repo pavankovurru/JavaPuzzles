@@ -9,9 +9,9 @@ import java.util.function.Consumer;
 public class Java8Date {
 
   public static void main(String[] args) {
-//    System.out.println(LocalDateTime.now(Clock.systemUTC()).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
-//      System.out.println(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
-//      System.out.println(LocalDateTime.now());
+    System.out.println(LocalDateTime.now(Clock.systemUTC()).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+      System.out.println(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+      System.out.println(LocalDateTime.now());
 //
 //      Arrays.asList(1,2,3,4,5).stream().filter(i -> i>2).distinct().forEach(System.out::println);
 //
@@ -50,7 +50,7 @@ public class Java8Date {
     System.out.println(op.orElse(2));
 
 //    System.out.println(op.get());
-      System.out.println("**********");
+      System.out.println("**********"+LocalDate.now());
 
 
 

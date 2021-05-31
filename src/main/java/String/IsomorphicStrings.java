@@ -7,6 +7,10 @@ import java.util.Set;
 
 public class IsomorphicStrings {
 
+    //Two strings, X and Y , are called isomorphic if all occurrences of each character in X can be
+    // replaced with another character to get Y and vice-versa. For example, consider strings ACAB and XCXY .
+    // They are isomorphic as we can map 'A' —> 'X' , 'B' —> 'Y' and 'C' —> 'C' .
+
     // Find if String X and Y are Isomorphic or not
     public static boolean isIsomorphic(String X, String Y)
     {

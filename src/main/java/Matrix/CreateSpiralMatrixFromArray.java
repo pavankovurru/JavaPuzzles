@@ -9,8 +9,10 @@ public class CreateSpiralMatrixFromArray {
 
     private static void printSpiralOrder(int[] arr, int[][] mat)
     {
-        int top = 0, bottom = M - 1;
-        int left = 0, right = N - 1;
+        int top = 0;
+        int left = 0;
+        int bottom = mat.length - 1;  //rows
+        int right = mat[0].length - 1; //columns
 
         int arrayIndex = 0;
 

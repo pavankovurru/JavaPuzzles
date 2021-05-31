@@ -8,6 +8,9 @@ public class Recursion {
     // reduceByOne(9);
     System.out.println(factorial(0));
    // System.out.println(recursiveLinearSearch(new int[] {4, 48, 4, 28, 34, 76, 9, 3}, 0, 3));
+
+
+    System.out.println(reverse("hello"));
   }
 
   public static void reduceByOne(int n) {
@@ -28,7 +31,7 @@ public class Recursion {
    return 1;
   }
 
-  public String reverse(String s) {
+  public static String reverse(String s) {
 
     int l = s.length();
 

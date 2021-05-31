@@ -22,7 +22,10 @@ public class SecondNonRepeatingCharacterInaString {
     }
 
     System.out.println("$$$$$$");
-    hm.forEach((k, v) -> {System.out.println("Key-"+k+ " Value-"+v);});
+    hm.forEach((k, v) -> {
+      if (v>1)
+      System.out.println("Key-"+k+ " Value-"+v);
+    });
     System.out.println("$$$$$$");
 
 

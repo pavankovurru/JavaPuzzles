@@ -5,10 +5,17 @@ public class StringDerivedFromAnother {
 
     // Simple solution is to check if y is a substring of x+x  , but this takes o(n) additional space
 
+    //      String combined = X + X;
+    //
+    //      if (combined.contains(Y)){
+    //          System.out.println("hurray");
+    //      }
+
   public static void main(String[] args) {
 
       String X = "ABCD";
       String Y = "DABC";
+
 
       if (check(X, Y)) {
           System.out.println("Given Strings can be derived from each other");
