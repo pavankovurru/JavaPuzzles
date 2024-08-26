@@ -35,10 +35,10 @@ public class ThreadDemo {
     //
     //    System.out.println(ts);
     //
-    //    String test = "$1,685,670.33";
+    //    String Test = "$1,685,670.33";
     //
     //      System.out.println("$1,685,670.33".replaceAll(",",""));
-    //    System.out.println(test.replaceAll(",", "").matches("\\$\\d+\\.\\d{2}"));
+    //    System.out.println(Test.replaceAll(",", "").matches("\\$\\d+\\.\\d{2}"));
 
     //      HashMap<String, Integer> map = new HashMap<>();
     //
@@ -86,7 +86,7 @@ public class ThreadDemo {
 
   public boolean test() {
     try {
-     return Files.lines(Paths.get(System.getProperty("user.dir"), "test.txt"))
+     return Files.lines(Paths.get(System.getProperty("user.dir"), "Test.txt"))
           .anyMatch( line -> line.matches("test123"));
     } catch (IOException e) {
       e.printStackTrace();

@@ -6,62 +6,103 @@ import java.util.Map;
 public class SubArrayWithEqualZerosAndOnes {
 
   public static void main(String[] args) {
-      int[] A = { 0, 0, 1, 0, 1, 0, 0 };
-      maxLenSubarray(A);
+      int[] arr = {1, 0, 0, 1, 0, 1, 1};
+      int[] result = findLargestSubarrayWithEqualZeroAndOne(arr);
+
+      if (result.length == 0) {
+          System.out.println("No subarray with equal 0s and 1s found.");
+      } else {
+          System.out.println("Largest subarray with equal 0s and 1s is from index "
+                  + result[0] + " to " + result[1]);
+      }
   }
 
 
 
-    public static void maxLenSubarray(int[] A)
-    {
-        // create an empty Hash Map to store ending index of first sub-array having some sum
-        Map<Integer, Integer> map = new HashMap<>();
+    public static int[] findLargestSubarrayWithEqualZeroAndOne(int[] arr) {
+        // HashMap to store the first occurrence of each cumulative sum
+        HashMap<Integer, Integer> sumMap = new HashMap<>();  // sum & index
+        int cumulativeSum = 0;
+        int maxLength = 0;
+        int startIndex = -1;
+        int endIndex = -1;
 
-//        // insert (0, -1) pair into the set to handle the case when sub-array with sum 0 starts from index 0
-//        map.put(0, -1);
+        // Traverse the array
+        for (int i = 0; i < arr.length; i++) {
+            // Convert 0 to -1
+            if (arr[i] == 0) {
+                arr[i] = -1;
+            }
 
-        // maximumLen stores the maximum length of sub-array with sum 0
-        int maximumLen = 0;
+            // Update cumulative sum
+            cumulativeSum += arr[i];
 
-        // stores ending index of maximum length sub-array having sum 0
-        int ending_index = -1;
-
-        int sum = 0;
-
-        // Traverse through the given array
-        for (int i = 0; i < A.length; i++)
-        {
-            // sum of elements so far (replace 0 with -1)
-            sum += (A[i] == 0)? -1: 1;
-
-            // if sum is seen before
-            if (map.containsKey(sum))
-            {
-
-                int currentLength = i-map.get(sum);
-                if (maximumLen < currentLength)
-                {
-                    maximumLen = currentLength;
-                    ending_index = i;
+            // Check if cumulative sum is zero
+            if (cumulativeSum == 0) {
+                if (i + 1 > maxLength) {
+                    maxLength = i + 1;
+                    startIndex = 0;
+                    endIndex = i;
                 }
             }
-            // if sum is seen for first time, insert sum with it index into the map
-            else {
-                map.put(sum, i);
+
+            // Check if this cumulative sum has been seen before
+            if (sumMap.containsKey(cumulativeSum)) {
+                int previousIndex = sumMap.get(cumulativeSum);
+                //Check if This Subarray is the Largest Found So Far
+                if (i - previousIndex > maxLength) {
+                    maxLength = i - previousIndex;
+                    startIndex = previousIndex + 1;
+                    endIndex = i;
+                }
+            } else {
+                // Store the first occurrence of this cumulative sum
+                sumMap.put(cumulativeSum, i);
             }
         }
 
+        // If no valid subarray is found, return an empty array
+        if (maxLength == 0) {
+            return new int[0];
+        }
 
-        // print the sub-array if present
-        if (ending_index != -1) {
-            System.out.println("[" + (ending_index - maximumLen + 1) + ", " +
-                    ending_index + "]");
-        }
-        else {
-            System.out.println("No sub-array exists");
-        }
+        // Return the indices of the largest subarray
+        return new int[]{startIndex, endIndex};
     }
 
+    public static int findSubarraysWithEqualZeroAndOne(int[] arr) {
+        // HashMap to store the cumulative sum and its frequency
+        HashMap<Integer, Integer> sumMap = new HashMap<>();
+        int cumulativeSum = 0;
+        int count = 0;
+
+        // Traverse the array
+        for (int i = 0; i < arr.length; i++) {
+            // Convert 0 to -1 to help find subarrays with equal 0s and 1s
+            if (arr[i] == 0) {
+                arr[i] = -1;
+            }
+
+            // Update cumulative sum
+            cumulativeSum += arr[i];
+
+            // If cumulative sum is zero, it means subarray from start to current index has equal 0s and 1s
+            if (cumulativeSum == 0) {
+                count++;
+            }
+
+            // If cumulative sum has been seen before, it means subarray from the previous index
+            // where this sum occurred to the current index has equal 0s and 1s
+            if (sumMap.containsKey(cumulativeSum)) {
+                count += sumMap.get(cumulativeSum);
+            }
+
+            // Update the HashMap with the current cumulative sum
+            sumMap.put(cumulativeSum, sumMap.getOrDefault(cumulativeSum, 0) + 1);
+        }
+
+        return count;
+    }
 
 
 }

@@ -1,6 +1,5 @@
 package Regex;
 
-import com.sun.tools.javac.util.Assert;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

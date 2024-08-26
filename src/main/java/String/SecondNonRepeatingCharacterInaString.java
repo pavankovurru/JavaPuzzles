@@ -20,17 +20,16 @@ public class SecondNonRepeatingCharacterInaString {
       }
     }
 
-    System.out.println("$$$$$$");
-    hm.forEach((k, v) -> {
-      if (v>1)
-      System.out.println("Key-"+k+ " Value-"+v);
-    });
-    System.out.println("$$$$$$");
+//    System.out.println("$$$$$$");
+//    hm.forEach((k, v) -> {
+//      if (v>1)
+//       System.out.println("Key-"+k+ " Value-"+v);
+//    });
+//    System.out.println("$$$$$$");
 
 
     int count = 0;
     for (Map.Entry<Character, Integer> en : hm.entrySet()) {
-
       if (en.getValue() == 1) {
         count++;
       }

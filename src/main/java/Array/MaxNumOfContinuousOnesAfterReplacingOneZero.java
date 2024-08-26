@@ -7,7 +7,7 @@ public class MaxNumOfContinuousOnesAfterReplacingOneZero {
     public static int findIndexofZero(int[] A)
     {
         int max_count = 0;	// stores maximum number of 1's (including 0)
-        int max_index = -1;   // stores index of 0 to be replaced
+        int result_zero_index = -1;   // stores index of 0 to be replaced
 
         int prev_zero_index = -1;   // stores index of previous zero
         int count = 0;  			// store current count of ones
@@ -33,12 +33,12 @@ public class MaxNumOfContinuousOnesAfterReplacingOneZero {
             if (count > max_count)
             {
                 max_count = count;
-                max_index = prev_zero_index;
+                result_zero_index = prev_zero_index;
             }
         }
 
         // return index of 0 to be replaced or -1 if array contains all 1's
-        return max_index;
+        return result_zero_index;
     }
 
     // main function

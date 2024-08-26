@@ -1,12 +1,12 @@
 package String;
 
-public class StringDerivedFromAnother {
+import java.util.Arrays;
 
+public class StringDerivedFromAnother {
 
     // Simple solution is to check if y is a substring of x+x  , but this takes o(n) additional space
 
-
-    //    String combined = X + Y ;
+    //    String combined = X + X ;
     //      if (combined.contains(Y)){
     //        System.out.println("YES!");
     //    }
@@ -50,6 +50,21 @@ public class StringDerivedFromAnother {
 
         // return false if no rotation is matched
         return false;
+    }
+
+
+    public static boolean areAnagrams(String str1, String str2) {
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+
+        char[] arr1 = str1.toCharArray();
+        char[] arr2 = str2.toCharArray();
+
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+
+        return Arrays.equals(arr1, arr2);
     }
 
 

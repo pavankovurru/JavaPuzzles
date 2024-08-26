@@ -15,7 +15,6 @@ public class ReverseString {
     for (int i = source.length() - 1; i >= 0; i--) {
       reverse = reverse + source.charAt(i);
     }
-
     return reverse;
   }
 
@@ -24,9 +23,9 @@ public class ReverseString {
     int reversenum = 0;
 
     while (number != 0) {
-      int digit = number % 10;
-      reversenum = reversenum * 10 + digit;
-      number = number / 10;
+      int lastDigit = number % 10; // get last digit
+      reversenum = reversenum * 10 + lastDigit;
+      number = number / 10; // remove last digit , 1/10 gives zero since java truncates
     }
 
     System.out.println("Reverse of input number is: " + reversenum);

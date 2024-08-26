@@ -13,24 +13,23 @@ public class Combinations
 
     static void combination(String prefix, String s)
     {
-        int N = s.length();
         System.out.println(prefix);
 
-        for (int i = 0 ; i < N ; i++)
+        for (int i = 0 ; i < s.length() ; i++)
             //combination(prefix + s.charAt(i),  s.substring(i+1,N)); // will get only permutations
-            combination(prefix + s.charAt(i), s.substring(0, i) + s.substring(i+1,N)); // will get all permutations and combinations
+            combination(prefix + s.charAt(i), s.substring(0, i) + s.substring(i+1, s.length())); // will get all permutations and combinations
     }
 
     //n!
     static void permutation(String prefix, String s)
     {
-        int N = s.length();
-
-        if (N == 0)
+        if (s.length() == 0)
             System.out.println(prefix);
 
-        for (int i = 0 ; i < N ; i++)
-            permutation(prefix + s.charAt(i), s.substring(0, i) + s.substring(i+1, N));
+        for (int i = 0 ; i < s.length() ; i++)
+            // recursively calls the permutation method with the new prefix and the remaining string
+            // (which excludes the current character).
+            permutation(prefix + s.charAt(i), s.substring(0, i) + s.substring(i+1, s.length()));
     }
 
     public static void main(String[] args)

@@ -41,7 +41,7 @@ public class Anagram {
             return false;
         }
 
-        // create an empty map
+        // create an empty map which will store characters from first string
         Map<Character, Integer> freq = new HashMap<>();
 
         // maintain count of each character of X in the map

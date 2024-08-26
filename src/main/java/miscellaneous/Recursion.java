@@ -35,10 +35,6 @@ public class Recursion {
 
     int l = s.length();
 
-    if (l == 1) {
-      return s;
-    }
-
     if (l > 1) {
       return s.charAt(l - 1) + reverse(s.substring(1, l - 1)) + s.charAt(0);
     }

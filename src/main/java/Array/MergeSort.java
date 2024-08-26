@@ -29,8 +29,8 @@ public class MergeSort {
       else answer[k++] = b[j++];
     }
 
+    //remaining elements from first & second array
     while (i < a.length) answer[k++] = a[i++];
-
     while (j < b.length) answer[k++] = b[j++];
 
     return answer;

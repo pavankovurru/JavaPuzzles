@@ -35,7 +35,7 @@ public class FindSubArraysWithSum0 {
     {
         int currentSum = 0;
 
-        HashMap<Integer, Integer> sumMap = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> sumMap = new HashMap<Integer, Integer>();  // sum & index
 
         for(int i = 0 ; i < A.length ; i ++)
         {
@@ -44,13 +44,11 @@ public class FindSubArraysWithSum0 {
             if(currentSum == 0)
             {
                 System.out.println("found subset : { 0 - " + i + " }");  // since we are adding elements from zero index to i in sum
-                sumMap.put(currentSum, i); //This may not be required
             }
 
-            else if(sumMap.get(currentSum) != null)
+            else if(sumMap.containsKey(currentSum))
             {
                 System.out.println("found subset - { " + (sumMap.get(currentSum) + 1) + " - " + i + " }");
-                sumMap.put(currentSum, i);
             }
 
             else if (A[i]==0){

@@ -16,11 +16,12 @@ public class ImplementPowerFunctionWithoutUsingMulOrDiv {
     //Without using * or / operators
     public static int pow(int a, int b)
     {
+
+        int res = 0;
+
         if(b == 0) {
             return 1;
         }
-
-        int res = 0;
 
         int increment = pow(a, b - 1);
 
@@ -34,7 +35,7 @@ public class ImplementPowerFunctionWithoutUsingMulOrDiv {
 
     public static void main(String[] args)
     {
-        System.out.print(pow(7, 3));
+        System.out.print(pow(2, 3));
     }
 
 

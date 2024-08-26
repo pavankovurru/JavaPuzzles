@@ -2,31 +2,27 @@ package String;
 
 public class excelCoulmnName {
 
-    // Function to convert given number into an excel column
-    public static String getColumnName(int n) {
-        // initalize output String as empty
-        StringBuilder res = new StringBuilder();
+    public static String convertToColumnName(int n) {
+        StringBuilder columnName = new StringBuilder();
 
         while (n > 0) {
-
-            //EXAMPLES :
-            //            System.out.println((char)(1 + 'A'));  // B
-            //            System.out.println('A'+1);  // 66
-            //            System.out.println('A');  // A
-
-            // find index of next letter and concatenate the letter to the solution
-
-            // Here index 0 corresponds to 'A' and 25 corresponds to 'Z'
-            int index = (n - 1) % 26;
-            res.append((char) (index + 'A'));
-            n = (n - 1) / 26;
+            n--; // Adjust for 0-based index (Excel columns are 1-based)
+            int remainder = n % 26;
+            columnName.insert(0, (char)(remainder + 'A')); // Prepend the character to the result
+            n = n / 26;
         }
 
-        return res.reverse().toString();
+        return columnName.toString();
     }
 
     public static void main(String[] args) {
-        int r = 28;  //28 - AB , 107 - DC
-        System.out.println(r + " - " + getColumnName(r));
+        // Test cases
+        System.out.println(convertToColumnName(1));   // Output: A
+        System.out.println(convertToColumnName(26));  // Output: Z
+//        System.out.println(convertToColumnName(27));  // Output: AA
+//        System.out.println(convertToColumnName(52));  // Output: AZ
+//        System.out.println(convertToColumnName(701)); // Output: ZY
+//        System.out.println(convertToColumnName(702)); // Output: ZZ
+//        System.out.println(convertToColumnName(703)); // Output: AAA
     }
 }

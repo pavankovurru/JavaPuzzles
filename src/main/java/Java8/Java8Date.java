@@ -15,9 +15,9 @@ public class Java8Date {
 //
 //      Arrays.asList(1,2,3,4,5).stream().filter(i -> i>2).distinct().forEach(System.out::println);
 //
-//      List <Integer> test = Arrays.asList(1,2,3,4,5);
+//      List <Integer> Test = Arrays.asList(1,2,3,4,5);
 //
-//      test.stream().map(x-> x+2).forEach( x -> {
+//      Test.stream().map(x-> x+2).forEach( x -> {
 //
 //
 //

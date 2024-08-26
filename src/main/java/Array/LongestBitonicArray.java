@@ -8,13 +8,11 @@ public class LongestBitonicArray {
     // Function to find length of Longest Bitonic Subarray in an array
     public static void findBitonicSubarray(int[] A)
     {
-        int n = A.length;
         //place holders to update at the end of processing
         int end_index = 0, max_len = 0;
-
-
         int i = 0;
-        while (i + 1 < n)
+
+        while (i + 1 < A.length)
         {
             // check for Longest Bitonic Subarray starting at A[i]
 
@@ -22,13 +20,13 @@ public class LongestBitonicArray {
             int len = 1;
 
             // run till sequence is increasing
-            while (i + 1 < n && A[i] < A[i + 1]) {
+            while (i + 1 < A.length && A[i] < A[i + 1]) {
                 i++;
                 len++;
             }
 
             // run till sequence is decreasing
-            while (i + 1 < n && A[i] > A[i + 1]) {
+            while (i + 1 < A.length && A[i] > A[i + 1]) {
                 i++;
                 len++;
             }

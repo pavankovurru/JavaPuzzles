@@ -11,7 +11,6 @@ public class BinarySearch {
 
     public static int binarySearch(int[] a, int x) {
 
-
         int p = 0;
         int r = a.length - 1;
 

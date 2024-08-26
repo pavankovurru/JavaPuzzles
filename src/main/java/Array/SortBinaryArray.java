@@ -28,13 +28,16 @@ public class SortBinaryArray {
 
         // put 0's in the beginning
         int k = 0;
-        while (zeros-- != 0) {
-            A[k++] = 0;
+        while (zeros != 0) {
+            A[k] = 0;
+            k++;
+            zeros--;
         }
 
         // fill all remaining elements by 1
         while (k < A.length) {
-            A[k++] = 1;
+            A[k] = 1;
+            k++;
         }
     }
 

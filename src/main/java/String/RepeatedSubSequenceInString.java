@@ -26,7 +26,6 @@ public class RepeatedSubSequenceInString {
     //
     //    Input: AABBC
     //    Output: Repeated Subsequence Exists (A B is repeated)
-    //
     //    Input: ABCDACB
     //    Output: Repeated Subsequence Exists (A B is repeated)
     //
@@ -64,7 +63,7 @@ public class RepeatedSubSequenceInString {
                 freq.put(currentChar,1);
             }
 
-            // if frequency of any character becomes 3, we have found the repeated subsequence //debatable
+            // if frequency of any character becomes 3, we have found the repeated subsequence
             if (freq.get(currentChar) >= 3) {
                 return true;
             }
@@ -79,7 +78,7 @@ public class RepeatedSubSequenceInString {
             }
         }
 
-        // return false if temp is a Palindrome
+        // return false if temp is a Palindrome, EX:ABCCBA does not have repeated subsequence
         return !isPalindrome(sb.toString());
     }
 

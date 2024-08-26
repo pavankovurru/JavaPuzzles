@@ -20,12 +20,11 @@ public class ProcessString {
 
         while (wordStartIndex < input.length()) {
 
-
             //Setting up word start Index
          try {
             //If character is not alphabetic append it to output and increment word index
             while (!Character.isAlphabetic(input.charAt(wordStartIndex))) {
-                output = output + input.charAt(wordStartIndex);
+                output = output + input.charAt(wordStartIndex); // add non alphabet character to output
                 wordStartIndex++;
             }
           } catch (Exception e) { // Handling input String that end with non Alphabetical Character

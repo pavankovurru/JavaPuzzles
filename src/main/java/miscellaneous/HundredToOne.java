@@ -16,10 +16,7 @@ public class HundredToOne {
 //
 
 
-    for (int i = 0 ; ; i++){
-      if (i == 100){
-        break;
-      }
+    for (int i = 0 ; i < 100 ; i++){
       System.out.println(100-i);
     }
   }

@@ -2,6 +2,7 @@ package Array;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 
 public class CompareArrays {
 
@@ -26,6 +27,11 @@ public class CompareArrays {
     public static boolean compareArrays() {
         HashSet<Integer> set1 = new HashSet<Integer>(Arrays.asList(1,2,3));
         HashSet<Integer> set2 = new HashSet<Integer>(Arrays.asList(1,3,2));
-        return set1.equals(set2);
+
+        List<Integer> list1 = Arrays.asList(1,2,3);
+        List<Integer> list2 = Arrays.asList(1,2,3);
+
+        return list1.equals(list2);
+//       return  set1.equals(set2);
     }
 }

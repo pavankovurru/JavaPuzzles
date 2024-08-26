@@ -66,7 +66,7 @@ public class LongestPalindromicSubString {
     {
         String str = "ABDCBCDBDCBBC";
 
-        System.out.println(new StringBuilder("test").reverse());
+        System.out.println(new StringBuilder("Test").reverse());
 
         System.out.println("Longest Palindromic SubString of " + str + " is "
                 + LongestPalindromicSubString(str, str.length() - 1));

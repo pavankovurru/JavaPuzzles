@@ -7,7 +7,6 @@ public class HighestProductOf3 {
         getHighestProductOfThree(new int[]{1,2,3,4,5,6});
     }
 
-
     public static int getHighestProductOfThree(int[] arr) {
 
         if (arr.length < 3) {
@@ -31,10 +30,10 @@ public class HighestProductOf3 {
             } else if (arr[i] > maximumTwo) {
                 maximumThree = maximumTwo;
                 maximumTwo = arr[i];
+
             } else if (arr[i] > maximumThree) {
                 maximumThree = arr[i];
             }
-
 
             if (arr[i] < minimumOne) {
                 minimumTwo = minimumOne;
